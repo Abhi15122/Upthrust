@@ -1,0 +1,35 @@
+/* Keep ribbon highlights from washing out the white service text. */
+.heading,
+.copy {
+  isolation: isolate;
+}
+
+.heading,
+.copy > p,
+.copy > ul {
+  text-shadow: 0 1px 2px #000, 0 2px 8px #000b;
+}
+
+.copy {
+  position: relative;
+}
+
+.heading::before,
+.copy::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -1.5cqw;
+  pointer-events: none;
+  border-radius: 1cqw;
+  background: rgb(0 0 0 / 82%);
+  filter: blur(1.5cqw);
+}
+
+@media (max-width: 600px) {
+  .heading::before,
+  .copy::before {
+    inset: -12px;
+    filter: blur(12px);
+  }
+}
