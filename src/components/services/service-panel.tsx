@@ -1,7 +1,6 @@
 import type { Content } from "@/lib/sanity/content";
 import { ServiceBullet } from "./service-bullet";
 import { Wireframe } from "../artwork/wireframe";
-import styles from "./service-panel.module.css";
 
 export function ServicePanel({
   service,
@@ -36,8 +35,12 @@ export function ServicePanel({
       />
       <div className="@container relative w-full aspect-[16/9] min-[1024px]:group-data-[enhanced=true]/services:w-[min(100vw,calc((100svh-64px)*16/9))] max-[600px]:aspect-auto max-[600px]:px-[6%] max-[600px]:pt-12 max-[600px]:pb-[54px]">
         <div
+          aria-hidden="true"
+          className="pointer-events-none absolute top-[38%] right-[2%] hidden h-[51%] w-[49%] bg-[radial-gradient(ellipse_at_center,#000b_0%,#0008_50%,transparent_75%)] blur-[2cqw] min-[601px]:block"
+        />
+        <div
           data-service-heading
-          className={`${styles.heading} absolute inset-x-[2.78%] top-[17.35%] max-[600px]:relative max-[600px]:inset-auto max-[600px]:mb-[30px]`}
+          className="absolute inset-x-[2.78%] top-[17.35%] max-[600px]:relative max-[600px]:inset-auto max-[600px]:mb-[30px]"
         >
           <p className="m-0 text-[1.074cqw] leading-[1.2] font-normal max-[600px]:mb-1.5 max-[600px]:text-[10px]">
             {service.eyebrow || "WHAT CAN WE DO FOR YOU"}
@@ -73,7 +76,6 @@ export function ServicePanel({
           <div
             data-service-copy
             className={[
-              styles.copy,
               "flex h-[23.0556cqw] flex-col items-start text-[1.389cqw] leading-[1.4] max-[600px]:h-auto max-[600px]:text-base max-[600px]:leading-[1.45]",
               refined
                 ? "font-semibold tracking-[-0.02em]"
