@@ -82,7 +82,7 @@ Confirmation emails and an email marketing integration are not configured.
 
 1. Open the live website in Chrome and open DevTools -> Console.
 2. Before submitting, inspect `(window.dataLayer || []).filter(item => item.event === "form_submit")`.
-3. Submit a valid email with consent. Confirm `/api/newsletter` returns HTTP 201, then inspect the same expression. Exactly one new event should appear with `event: "form_submit"`, `form_id: "newsletter"`, and the API response's `submission_id`. GTM may add its internal `gtm.uniqueEventId`; the event contains no email address.
+3. Submit a valid email with consent. Confirm `/api/newsletter` returns HTTP 201, then inspect the same expression. Exactly one new event should appear with `event: "form_submit"`, `form_id: "newsletter"`, and `submission_id` equal to the API response's `submissionId`. GTM may add its internal `gtm.uniqueEventId`; the event contains no email address.
 4. Match the event's submission ID to the `newsletter.<submission_id>` document in Sanity's private submissions workspace.
 5. Invalid input must emit no event. The automated failure test intercepts the API with HTTP 503 and verifies that the error leaves the conversion count unchanged; it does not disable production storage.
 
