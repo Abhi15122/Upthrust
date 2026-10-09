@@ -1,0 +1,292 @@
+@layer components {
+  .services {
+    background: #111;
+    color: #f7f7f2;
+    padding: 90px 5% 20px;
+  }
+  .services-heading {
+    position: relative;
+    max-width: 1400px;
+    margin: auto;
+    padding-bottom: 70px;
+  }
+  .services-heading h2 {
+    font-family: Anton, Impact, sans-serif;
+    font-size: clamp(60px, 8.5vw, 125px);
+    line-height: 1.03;
+    letter-spacing: -2px;
+    margin: 25px 0 0;
+  }
+  .services-heading h2 span {
+    color: #ff4a00;
+  }
+  .services-heading > p:last-child {
+    position: absolute;
+    right: 0;
+    bottom: 78px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #b9b9b3;
+  }
+  .service {
+    max-width: 1400px;
+    margin: auto;
+    border-top: 1px solid #ffffff30;
+    padding: 30px 0 80px;
+  }
+  .service-top {
+    display: flex;
+    gap: 24px;
+    align-items: baseline;
+    margin-bottom: 35px;
+  }
+  .service-number {
+    font-family: monospace;
+    color: #ff6830;
+    font-size: 12px;
+  }
+  .service-top h3 {
+    font-size: clamp(27px, 3.9vw, 57px);
+    line-height: 1.12;
+    letter-spacing: -1.8px;
+    font-weight: 500;
+  }
+  .service-cross {
+    margin-left: auto;
+    color: #ff4a00;
+    font-size: 35px;
+  }
+  .service-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 9%;
+    align-items: center;
+  }
+  .service-artwork {
+    min-width: 0;
+  }
+  .service-artwork > img {
+    width: 100%;
+    aspect-ratio: 1.4;
+    object-fit: cover;
+  }
+  .concept-art {
+    aspect-ratio: 1.4;
+    position: relative;
+    padding: 24px;
+    overflow: hidden;
+    border: 1px solid #ffffff20;
+  }
+  .art-caption {
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 3;
+  }
+  .concept-art strong {
+    position: absolute;
+    left: 25px;
+    bottom: 45px;
+    font-family: Anton, sans-serif;
+    font-size: clamp(38px, 4.4vw, 70px);
+    line-height: 0.98;
+    letter-spacing: -1px;
+    z-index: 2;
+  }
+  .art-footnote {
+    position: absolute;
+    bottom: 17px;
+    left: 25px;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+  .concept-0 {
+    color: #ff4a00;
+    background: #e8e9de;
+    background-image:
+      linear-gradient(#1111 1px, transparent 1px),
+      linear-gradient(90deg, #1111 1px, transparent 1px);
+    background-size: 35px 35px;
+  }
+  .orbital-art {
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    width: 50%;
+    height: 70%;
+    transform: rotate(-25deg);
+  }
+  .orbital-art i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #ff4a00;
+    border-radius: 50%;
+  }
+  .orbital-art i:nth-child(2) {
+    transform: rotateY(40deg);
+  }
+  .orbital-art i:nth-child(3) {
+    transform: rotateY(65deg);
+  }
+  .orbital-art i:nth-child(4) {
+    transform: rotateY(80deg);
+  }
+  .concept-1 {
+    background: #b9b5f2;
+    color: #211838;
+  }
+  .identity-letters {
+    position: absolute;
+    right: -10px;
+    top: 10%;
+    display: flex;
+    font-size: clamp(90px, 14vw, 215px);
+    font-weight: 600;
+    letter-spacing: -18px;
+    line-height: 1;
+  }
+  .identity-letters span:last-child {
+    color: #fb4a0a;
+    transform: rotate(-8deg);
+    margin-left: -10px;
+  }
+  .concept-1 strong {
+    font-size: clamp(33px, 3.4vw, 55px);
+  }
+  .concept-2 {
+    background: #ff4a00;
+    color: #151515;
+  }
+  .concept-2 strong {
+    font-size: clamp(45px, 5vw, 78px);
+  }
+  .campaign-star {
+    position: absolute;
+    right: -15px;
+    top: -55px;
+    font-size: clamp(220px, 24vw, 365px);
+    line-height: 1.2;
+    color: #ffc4a7;
+  }
+  .service-summary {
+    font-size: clamp(19px, 2vw, 28px);
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+    margin-bottom: 25px;
+    max-width: 470px;
+  }
+  .service-copy ul {
+    padding: 0;
+    list-style: none;
+  }
+  .service-copy li {
+    display: flex;
+    gap: 15px;
+    padding: 11px 0;
+    border-bottom: 1px solid #ffffff15;
+    font-size: 13px;
+    color: #cfcec7;
+  }
+  .service-copy li span {
+    color: #ff6830;
+  }
+  .service-note {
+    margin-top: 20px;
+    font-size: 11px;
+    line-height: 1.7;
+    color: #aaa;
+  }
+  .service-contact {
+    margin-top: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 50px;
+    padding: 12px 18px;
+    background: #f7f7f2;
+    color: #181818;
+    font-size: 11px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .service-contact:hover {
+    background: #ff4a00;
+    color: #fff;
+  }
+  .service-contact span {
+    font-size: 24px;
+    line-height: 1;
+  }
+  @media (max-width: 1000px) {
+    .service-layout {
+      gap: 6%;
+    }
+    .service-copy li {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 600px) {
+    .services {
+      padding: 60px 6% 0;
+    }
+    .service {
+      padding: 24px 0 50px;
+    }
+    .service-top {
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+    .service-top h3 {
+      font-size: 30px;
+      letter-spacing: -1px;
+    }
+    .service-cross {
+      font-size: 22px;
+    }
+    .service-number {
+      font-size: 10px;
+    }
+    .service-layout {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+    .concept-art {
+      padding: 19px;
+    }
+    .concept-art strong {
+      font-size: 48px;
+      left: 20px;
+    }
+    .art-caption {
+      font-size: 8px;
+    }
+    .art-footnote {
+      left: 20px;
+      font-size: 7px;
+    }
+    .identity-letters {
+      font-size: 150px;
+      letter-spacing: -12px;
+      top: 7%;
+    }
+    .concept-1 strong {
+      font-size: 43px;
+    }
+    .campaign-star {
+      font-size: 230px;
+      top: -35px;
+    }
+    .service-summary {
+      font-size: 22px;
+      margin-bottom: 17px;
+    }
+    .service-copy li {
+      font-size: 13px;
+    }
+    .service-contact {
+      margin-top: 23px;
+    }
+  }
+}

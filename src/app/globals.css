@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@theme {
+  --color-orange: #ff4a00;
+  --color-ink: #121212;
+  --font-sans: Inter, Arial, sans-serif;
+  --font-display: Anton, Impact, sans-serif;
+}
+@layer base {
+  :root {
+    background: #f8f8f4;
+    color: #141414;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+  }
+  body {
+    margin: 0;
+  }
+  button,
+  a,
+  input,
+  summary {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button,
+  a,
+  summary {
+    touch-action: manipulation;
+  }
+  button,
+  summary {
+    cursor: pointer;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  button,
+  input {
+    font: inherit;
+  }
+  ::selection {
+    background: #ff4a00;
+    color: white;
+  }
+  :focus-visible {
+    outline: 3px solid #ff4a00;
+    outline-offset: 5px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+}

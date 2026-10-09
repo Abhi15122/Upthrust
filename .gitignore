@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.sanity/
+.astro/
+.netlify/
+.DS_Store
+*.log
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+# Keep Blender source files locally; GLB exports are the web assets.
+*.blend
+
+# Local submissions and QA artifacts
+.data/
+.qa/
+
+.next/
+playwright-report/
+test-results/
+
+.vercel/
